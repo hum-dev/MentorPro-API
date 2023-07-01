@@ -44,3 +44,14 @@ CREATE TABLE Mentees (
 );
 
 SELECT * FROM Mentees
+
+CREATE TABLE Messages (
+  message_id INT PRIMARY KEY IDENTITY(1, 1),
+  name VARCHAR(255),
+  phonenumber VARCHAR(255),
+  email VARCHAR(255),
+  subject VARCHAR(255),
+  message VARCHAR(255),
+  user_id INT,
+  FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
